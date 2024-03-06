@@ -30,13 +30,13 @@ const Card = () => {
       {" "}
       <div className="flex justify-between w-full flex-wrap gap-4  my-10 px-5">
         {data.map((item, index) => (
-          <div className="card w-96 bg-base-100 shadow-xl" key={data.id}>
+          <div className="card w-96 bg-base-100 shadow-xl" key={index}>
             <figure className="h-44 text-center">
-              <img
+              <Image
                 src={item.image}
                 width={100}
                 height={100}
-                alt="Shoes"
+                alt={item.title}
                 className="object-cover"
               />
             </figure>
@@ -64,7 +64,6 @@ const Card = () => {
           </div>
         ))}
       </div>
-    
     </>
   );
 };
