@@ -22,9 +22,9 @@ const Navbar = () => {
   return (
     <>
       {" "}
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-100 pt-5">
         <div className="flex-1">
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">MR store</a>
         </div>
         <div className="flex-1">
           <a className="btn btn-ghost text-xl">
@@ -39,13 +39,13 @@ const Navbar = () => {
           </button>
         </div>
         <div className="flex-none gap-2">
-          <div className="form-control">
+          {/* <div className="form-control">
             <input
               type="text"
               placeholder="Search"
               className="input input-bordered w-24 md:w-auto"
             />
-          </div>
+          </div> */}
           <div className="dropdown dropdown-end">
             <div
               tabIndex={0}
@@ -84,7 +84,9 @@ const Navbar = () => {
       <dialog id="my_modal_4" className="modal">
         <div className="modal-box w-11/12 max-w-5xl">
           {item.card.length === 0 ? (
-            <h1>There is 0 item right now </h1>
+            <h1 className="text-4xl font-serif font-semibold text-cyan-400">
+              There is 0 item right now{" "}
+            </h1>
           ) : (
             <>
               {" "}
