@@ -2,6 +2,7 @@
 
 import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
+import BillComponent from "./BillComponent";
 
 const Navbar = () => {
   const item = useSelector((state) => state);
@@ -127,7 +128,7 @@ const Navbar = () => {
                       </div>
                     ))}
                 </div>
-                <div className="max-w-sm h-44 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-20">
+                {/* <div className="max-w-sm h-44 p-6 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 m-20">
                   <a href="#">
                     <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
                       Your bill total is {totalValue}$.
@@ -142,7 +143,8 @@ const Navbar = () => {
                   >
                     download your bill{" "}
                   </a>
-                </div>
+                </div> */}
+                <BillComponent totalValue={totalValue} />
               </div>
               <div className="modal-action">
                 <form method="dialog">
